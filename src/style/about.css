@@ -1,0 +1,145 @@
+/* About Me title */
+.about-title {
+  font-weight: 900;
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 0.25rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Let's Connect button text white */
+.btn-connect {
+  color: white;
+  background: transparent;
+  border: 2px solid;
+  border-image-slice: 1;
+  border-width: 2px;
+  border-image-source: linear-gradient(90deg, #a855f7, #ec4899);
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+  min-width: 140px;
+  text-align: center;
+}
+
+.btn-connect:hover {
+  background: linear-gradient(90deg, #a855f7, #ec4899);
+  color: white;
+}
+
+/* Download CV button */
+.btn-download {
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, #a855f7, #ec4899);
+  color: white;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(168, 85, 247, 0.6);
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  min-width: 140px;
+  text-align: center;
+}
+
+.btn-download:hover {
+  background: linear-gradient(90deg, #7c3aed, #db2777);
+  box-shadow: 0 6px 20px rgba(124, 58, 237, 0.8);
+}
+
+/* Stats oval style */
+.stats-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.stat-item {
+  background: linear-gradient(90deg, #a855f7, #ec4899);
+  border-radius: 9999px; /* full pill shape */
+  padding: 0.5rem 1.5rem;
+  color: white;
+  text-align: center;
+  min-width: 100px;
+  box-shadow: 0 4px 15px rgba(168, 85, 247, 0.6);
+  font-family: 'Poppins', sans-serif;
+  cursor: default;
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat-number {
+  font-weight: 900;
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.stat-label {
+  font-weight: 500;
+  font-size: 0.65rem;
+}
+
+/* Skill tags gradient backgrounds */
+.skill-tag {
+  display: inline-block;
+  padding: 0.5rem 1.25rem;
+  border-radius: 9999px;
+  font-weight: 700;
+  color: white;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  cursor: default;
+  user-select: none;
+  font-family: 'Poppins', sans-serif;
+  transition: background 0.3s ease;
+  white-space: nowrap;
+  font-size: 0.875rem;
+}
+
+.skill-tag:nth-child(1) {
+  background: linear-gradient(90deg, #ec4899, #f472b6);
+}
+
+.skill-tag:nth-child(2) {
+  background: linear-gradient(90deg, #a855f7, #c084fc);
+}
+
+.skill-tag:nth-child(3) {
+  background: linear-gradient(90deg, #7c3aed, #a78bfa);
+}
+
+.skill-tag:nth-child(4) {
+  background: linear-gradient(90deg, #60a5fa, #818cf8);
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .about-title {
+    font-size: 2rem;
+  }
+  .stat-item {
+    min-width: 80px;
+    padding: 0.5rem 1rem;
+  }
+  .stat-number {
+    font-size: 0.85rem;
+  }
+  .stat-label {
+    font-size: 0.55rem;
+  }
+  .btn-download, .btn-connect {
+    min-width: 120px;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+  }
+  .skill-tag {
+    font-size: 0.75rem;
+    padding: 0.4rem 1rem;
+  }
+}

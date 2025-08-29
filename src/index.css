@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom classes */
+.gradient-bg {
+  background: linear-gradient(135deg, #4c6ef5, #9775fa);
+}
+
+.card-shadow {
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, #ff6b6b, #f06595);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.btn-primary {
+  @apply bg-gradient-to-r from-orange-500 to-pink-500 text-white font-semibold px-6 py-2 rounded-full shadow-lg hover:scale-105 transition transform duration-300;
+}
+
+.btn-secondary {
+  @apply border border-gray-300 text-gray-700 px-6 py-2 rounded-full hover:bg-gray-200 transition duration-300;
+}
