@@ -1,9 +1,11 @@
 // src/App.jsx
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "../style/landing.css";
 import About from "./about";
 
 function Landing() {
+  const [imageError, setImageError] = useState(false);
+
   useEffect(() => {
     // Create floating particles
     function createParticles() {
@@ -98,7 +100,16 @@ function Landing() {
             <div className="hero">
               <div className="glass-card">
                 <div className="profile-container">
-                  <div className="profile-img">S</div>
+                  {imageError ? (
+                    <div className="profile-img">S</div>
+                  ) : (
+                    <img
+                      src="/sinchana.jpg"
+                      alt="Sinchana Profile"
+                      className="profile-img"
+                      onError={() => setImageError(true)}
+                    />
+                  )}
                 </div>
 
                 <h1 className="name">Sinchana</h1>
@@ -137,7 +148,7 @@ function Landing() {
           </div>
           <div className="scroll-indicator">Scroll to explore ↓</div>
         </div>
-        <About />
+        {/* <About /> */}
       </div>
     </>
   );

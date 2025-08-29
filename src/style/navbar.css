@@ -1,11 +1,10 @@
-Navbar
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
-  padding: 20px 0;
+  padding: 20.6px 0;
   transition: all 0.3s ease;
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(20px);
@@ -13,7 +12,7 @@ Navbar
 }
 
 .navbar.scrolled {
-  padding: 15px 0;
+  padding: 15.45px 0;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(25px);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -69,14 +68,6 @@ Navbar
   letter-spacing: 0.5px;
 }
 
-.nav-link::before {
-  /* Removed animation effect to ensure link is fully clickable */
-}
-
-.nav-link:hover::before {
-  /* Removed animation effect to ensure link is fully clickable */
-}
-
 .nav-link:hover {
   color: white;
   background: rgba(255, 255, 255, 0.1);
@@ -107,35 +98,59 @@ Navbar
 
 .mobile-menu {
   display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(20px);
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 280px;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(25px);
+  border-left: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: -10px 0 40px rgba(0, 0, 0, 0.3);
+  transition: right 0.3s ease;
+  z-index: 1001;
 }
 
 .mobile-menu.active {
   display: block;
-  animation: slideDown 0.3s ease;
+  right: 0;
+  animation: slideInRight 0.3s ease;
 }
 
-@keyframes slideDown {
+@keyframes slideInRight {
   from {
-    opacity: 0;
-    transform: translateY(-20px);
+    right: -100%;
   }
   to {
-    opacity: 1;
-    transform: translateY(0);
+    right: 0;
   }
+}
+
+.mobile-menu-header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 15px;
+}
+
+.mobile-menu-close {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.mobile-menu-close:hover {
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .mobile-nav-menu {
   list-style: none;
-  padding: 20px 0;
+  padding: 20.6px 0;
+  margin-top: 20px;
 }
 
 .mobile-nav-item {
@@ -160,21 +175,33 @@ Navbar
   color: white;
 }
 
-/* Responsive navbar */
-@media (max-width: 768px) {
-  .nav-menu {
-    display: none;
-  }
+/* Social Icons */
+.nav-social-icons {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
 
-  .mobile-menu-btn {
-    display: block;
-  }
+.nav-social-link {
+  color: rgba(255, 255, 255, 0.9);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  padding: 5px;
+}
 
-  .nav-container {
-    padding: 0 20px;
-  }
+.nav-social-link:hover {
+  color: white;
+  box-shadow: 0 0 10px #ff6b6b, 0 0 20px #ee5a24;
+  transform: translateY(-3px);
+}
 
-  .nav-logo {
-    font-size: 1.5rem;
-  }
+.nav-icon {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
 }

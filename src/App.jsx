@@ -1,7 +1,7 @@
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './pages/navbar.jsx';
-import Landing from './pages/landing.jsx';
+import Home from './pages/home.jsx';
 import About from './pages/about.jsx';
 import Skill from './pages/skill.jsx';
 import Certification from './pages/certification.jsx';
@@ -15,7 +15,7 @@ function App() {
     <Router>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Landing />} />
+        <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/skills" element={<Skill />} />
         <Route path="/certifications" element={<Certification />} />
