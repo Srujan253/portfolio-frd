@@ -1,25 +1,31 @@
 /* Contact Section */
 .contact-section {
-  padding: 80px 20px;
-  background: transparent;
+  padding: 81.6px 20.4px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   min-height: 100vh;
   position: relative;
   scroll-margin-top: 80px;
+  border: none;
+  margin: 0;
 }
 
 .section-title {
   font-size: 3.5rem;
   font-weight: 700;
-  background: linear-gradient(135deg, #fff, #f0f0f0);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  margin-bottom: 60px;
-  animation: textGlow 2s ease-in-out infinite alternate;
+  color: #ffffff;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  margin-bottom: 1.01rem;
+  border-bottom: none;
+  padding-bottom: 0;
   text-align: center;
   width: 100%;
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  -webkit-text-fill-color: unset !important;
+  background-clip: unset !important;
+  -webkit-text-fill-color: #ffffff !important;
 }
 
 .contact-container {

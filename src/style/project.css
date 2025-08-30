@@ -1,8 +1,8 @@
 /* Projects Section */
 .projects-section {
-  padding: 80px 20px 20px 20px;
+  padding: 81.6px 20.4px 20.4px 20.4px;
   /* Removed negative margin-top */
-  padding-top: 60px; /* adjusted padding top for navbar offset */
+  padding-top: 61.2px; /* adjusted padding top for navbar offset */
   min-height: 100vh;
   position: relative;
   z-index: 10;
@@ -29,13 +29,16 @@
   text-align: center;
   font-size: 3.5rem;
   font-weight: 700;
-  background: linear-gradient(135deg, #fff, #f0f0f0);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  margin-bottom: 60px;
+  color: #ffffff;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  margin-bottom: 61.2px;
   animation: textGlow 2s ease-in-out infinite alternate;
   width: 100%;
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  -webkit-text-fill-color: unset !important;
+  background-clip: unset !important;
+  -webkit-text-fill-color: #ffffff !important;
 }
 
 /* Container */
