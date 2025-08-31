@@ -113,11 +113,9 @@ function Landing() {
                 </div>
 
                 <h1 className="name">Sinchana</h1>
-                <p className="tagline">Creative Designer & Developer</p>
+                <p className="tagline">Cloud Security Specialist</p>
                 <p className="description">
-                  Passionate about creating beautiful digital experiences that blend
-                  creativity with functionality. I specialize in bringing ideas to
-                  life through innovative design and cutting-edge technology.
+                  Focused on securing cloud environments by implementing identity management, encryption, and compliance-driven solutions to protect sensitive data.
                 </p>
 
                 <div className="cta-buttons">

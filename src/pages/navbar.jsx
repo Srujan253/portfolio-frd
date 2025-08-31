@@ -66,8 +66,6 @@ const Navbar = () => {
           ))}
         </ul>
 
-
-
         {/* Mobile Button */}
         <button className="mobile-menu-btn" onClick={toggleMobileMenu}>
           ☰

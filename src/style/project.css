@@ -1,23 +1,31 @@
 /* Projects Section */
 .projects-section {
-  padding: 81.6px 20.4px 20.4px 20.4px;
-  /* Removed negative margin-top */
-  padding-top: 61.2px; /* adjusted padding top for navbar offset */
   min-height: 100vh;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 81.6px 20.4px;
   position: relative;
-  z-index: 10;
+  overflow: hidden;
+  border: none;
+  margin: 0;
   opacity: 0;
   transform: translateY(50px);
   transition: all 0.8s ease;
   scroll-margin-top: 80px; /* offset for fixed navbar height */
-  /* Add pseudo-element for anchor offset */
 }
 .projects-section::before {
-  content: "";
-  display: block;
-  height: 60px; /* height of navbar */
-  margin-top: -60px; /* negative margin of navbar height */
-  visibility: hidden;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(66, 153, 225, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
+  pointer-events: none;
 }
 
 .projects-section.visible {
@@ -74,10 +82,10 @@
 
 /* Project Card */
 .project-card {
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--card-bg);
   backdrop-filter: blur(20px);
   border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid var(--border-color);
   overflow: hidden;
   transition: all 0.3s ease;
   animation: slideUp 1s ease-out;
@@ -199,12 +207,12 @@
   align-items: center;
   gap: 6px;
   padding: 6px 12px;
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--bg-tertiary);
   border-radius: 15px;
-  color: rgba(255, 255, 255, 0.9);
+  color: var(--text-secondary);
   font-size: 0.8rem;
   font-weight: 500;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid var(--border-color);
   backdrop-filter: blur(10px);
   transition: all 0.3s ease;
 }
