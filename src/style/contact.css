@@ -1,10 +1,13 @@
 /* Contact Section */
 .contact-section {
+  min-height: 100vh;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
   padding: 81.6px 20.4px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  min-height: 100vh;
   position: relative;
   scroll-margin-top: 80px;
   border: none;

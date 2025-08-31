@@ -1,3 +1,4 @@
+
 import React, { useEffect, useRef, useState } from "react";
 import "../style/skill.css";
 import { FaReact, FaNodeJs, FaPython, FaGitAlt } from "react-icons/fa";
@@ -66,37 +67,44 @@ export default function Skill() {
                 <div className="skill-name">{skill.name}</div>
               </div>
 
-              <div className={`skill-progress-container ${hoveredIndex === index ? "show" : ""}`}>
-                <svg className="progress-ring" width="120" height="120">
-                  <circle
-                    className="progress-ring-background"
-                    stroke="#2D3748"
-                    strokeWidth="8"
-                    fill="transparent"
-                    r="40"
-                    cx="60"
-                    cy="60"
-                  />
-                  <circle
-                    className="progress-ring-circle"
-                    stroke={skill.color}
-                    strokeWidth="8"
-                    strokeLinecap="round"
-                    fill="transparent"
-                    r="40"
-                    cx="60"
-                    cy="60"
-                    style={{
-                      strokeDasharray: circumference,
-                      strokeDashoffset: calculateStrokeDashoffset(skill.percentage),
-                    }}
-                  />
-                </svg>
-                <div className="skill-percentage">
-                  <span>{skill.percentage}%</span>
-                </div>
-                <div className="skill-tooltip">{skill.description}</div>
-              </div>
+              <svg className="progress-ring" width="120" height="120">
+                <circle
+                  className="progress-ring-background"
+                  stroke="#2D3748"
+                  strokeWidth="8"
+                  fill="transparent"
+                  r="40"
+                  cx="60"
+                  cy="60"
+                />
+                <circle
+                  className={`progress-ring-circle ${hoveredIndex === index ? "animate" : ""}`}
+                  stroke={skill.color}
+                  strokeWidth="8"
+                  strokeLinecap="round"
+                  fill="transparent"
+                  r="40"
+                  cx="60"
+                  cy="60"
+                  style={{
+                    strokeDasharray: circumference,
+                    strokeDashoffset: circumference,
+                    "--target-offset": calculateStrokeDashoffset(skill.percentage),
+                  }}
+                />
+                <text
+                  x="60"
+                  y="65"
+                  textAnchor="middle"
+                  className="skill-percentage-text"
+                  fill="white"
+                  fontSize="16"
+                  fontWeight="700"
+                  style={{ transform: "rotate(90deg)", transformOrigin: "60px 65px" }}
+                >
+                  {skill.percentage}%
+                </text>
+              </svg>
             </div>
           ))}
         </div>
