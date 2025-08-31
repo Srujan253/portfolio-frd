@@ -3,27 +3,28 @@ import { FaBriefcase, FaGraduationCap } from "react-icons/fa";
 import "../style/timeline.css";
 
 const timelineData = [
-  {
-    type: "work",
-    title: "Software Engineer",
-    company: "Tech Corp",
-    duration: "Jan 2022 – Present",
-    description: "Developed scalable web applications using React and Node.js.",
-  },
+  // {
+  //   type: "work",
+  //   title: "Software Engineer",
+  //   company: "Tech Corp",
+  //   duration: "Jan 2022 – Present",
+  //   description: "Developed scalable web applications using React and Node.js.",
+  // },
+  
   {
     type: "education",
-    title: "Bachelor of Science in Computer Science",
-    company: "State University",
-    duration: "Sep 2017 – Jun 2021",
-    description: "Graduated with honors, focused on software engineering and AI.",
+    title: "B.Tech in Electrical and Electronics Engineering",
+    company: "sir m vishweshwaraiah institute of technology",
+    duration: "aug 2023 – Current",
+    description: "Graduated with honors, focused on software and EEE Skills",
   },
-  {
-    type: "work",
-    title: "Intern Developer",
-    company: "Startup Inc.",
-    duration: "Jun 2020 – Aug 2020",
-    description: "Contributed to frontend development and UI improvements.",
-  },
+  // {
+  //   type: "work",
+  //   title: "Intern Developer",
+  //   company: "Startup Inc.",
+  //   duration: "Jun 2020 – Aug 2020",
+  //   description: "Contributed to frontend development and UI improvements.",
+  // },
   // Add more timeline entries as needed
 ];
 

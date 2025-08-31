@@ -60,9 +60,10 @@
 
 .certifications-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
   justify-content: center;
+  width: 100%;
 }
 
 .cert-card {
@@ -298,14 +299,13 @@
 /* Responsive Design */
 @media (max-width: 1024px) {
   .certifications-grid {
-    grid-template-columns: repeat(2, 1fr);
     gap: 25px;
   }
-  
+
   .certification-title {
     font-size: 3rem;
   }
-  
+
   .modal-content {
     max-width: 700px;
   }
@@ -313,55 +313,56 @@
 
 @media (max-width: 768px) {
   .certifications-grid {
-    grid-template-columns: 1fr;
     gap: 20px;
-    max-width: 500px;
-    margin: 0 auto;
   }
-  
+
   .certification-title {
     font-size: 2.5rem;
   }
-  
+
   .certification-section {
     padding: 60px 15px;
   }
-  
+
   .modal-image {
     padding: 30px 20px;
   }
-  
+
   .modal-details {
     padding: 0 20px 30px;
   }
-  
+
   .modal-details h3 {
     font-size: 1.5rem;
   }
 }
 
 @media (max-width: 480px) {
+  .certifications-grid {
+    gap: 15px;
+  }
+
   .certification-title {
     font-size: 2rem;
   }
-  
+
   .certification-subtitle {
     font-size: 1rem;
   }
-  
+
   .cert-content {
     padding: 20px;
   }
-  
+
   .cert-title {
     font-size: 1.1rem;
   }
-  
+
   .modal-content {
     margin: 10px;
     max-height: 95vh;
   }
-  
+
   .modal-image img {
     max-height: 300px;
   }
